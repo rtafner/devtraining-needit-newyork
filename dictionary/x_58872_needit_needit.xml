@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element attributes="encode_utf8=false" label="Requisitado por" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="tecnologia" label="Tipo de Requisição" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Recursos Humanos" sequence="0" value="RH"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="Jurídico" sequence="2" value="jurídico"/>
+                <element inactive_on_update="false" label="Tecnologia" sequence="3" value="tecnologia"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="parecer jurídico" label="Item" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Funcionário" sequence="0" value="funcionário"/>
+                <element inactive_on_update="false" label="Estágiário" sequence="1" value="estágiário"/>
+                <element inactive_on_update="false" label="Computador" sequence="2" value="computador"/>
+                <element inactive_on_update="false" label="Notebook" sequence="3" value="notebook"/>
+                <element inactive_on_update="false" label="Parecer Jurídico" sequence="4" value="parecer jurídico"/>
+                <element inactive_on_update="false" label="Contrato" sequence="5" value="contrato"/>
+                <element inactive_on_update="false" label="Aplicativo" sequence="6" value="aplicativo"/>
+                <element inactive_on_update="false" label="Software" sequence="7" value="software"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Quando" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
